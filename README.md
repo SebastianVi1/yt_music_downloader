@@ -39,19 +39,7 @@ sudo apt install ffmpeg
 
 ## Usage
 
-Launch the app:
-
-```
-🔓  Not logged in — login to access your library
-────────────────────────────────────────
-🎵  Search and download tracks
-🔗  Download by URL
-📋  Download playlist by ID
-🔐  Login to YouTube Music
-⚙️   Settings
-────────────────────────────────────────
-🚪  Exit
-```
+![Screenshot](screenshots/screenshot.png)
 
 After logging in, a **My Library** section appears with your personal content.
 
@@ -64,7 +52,7 @@ The app uses **browser headers** — it acts as your browser by reusing its YouT
 3. Press **F12** → **Network** tab
 4. In the filter bar, type `browse` to find a POST request to `/browse`
 5. Right-click the request → **Copy** → **Copy request headers**
-   *(Chrome: click the request, scroll to "Request Headers", select from `accept: */*` through the `Cookie` line)*
+   _(Chrome: click the request, scroll to "Request Headers", select from `accept: _/_`through the`Cookie` line)_
 6. Paste the headers into the app
 
 Credentials are saved to `~/.config/ytmusic/browser.json` and remain valid for ~2 years (as long as you don't log out of YouTube Music in the browser).
@@ -75,11 +63,11 @@ Type a query, pick tracks with Space, press Enter to download.
 
 ### Download by URL
 
-| Type | Example |
-|------|---------|
-| Track | `https://music.youtube.com/watch?v=...` |
+| Type     | Example                                       |
+| -------- | --------------------------------------------- |
+| Track    | `https://music.youtube.com/watch?v=...`       |
 | Playlist | `https://music.youtube.com/playlist?list=...` |
-| Album | `https://music.youtube.com/browse/...` |
+| Album    | `https://music.youtube.com/browse/...`        |
 
 ### My Library (requires login)
 
@@ -120,10 +108,10 @@ yt_music_downloader/
 
 ## Dependencies
 
-| Library | Purpose |
-|---------|---------|
-| [ytmusicapi](https://github.com/sigma67/ytmusicapi) | YouTube Music API client |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Audio extraction and download |
-| [questionary](https://github.com/tmbo/questionary) | Interactive CLI prompts |
-| [rich](https://github.com/Textualize/rich) | Terminal formatting and panels |
-| ffmpeg (system) | Audio conversion and metadata embedding |
+| Library                                             | Purpose                                 |
+| --------------------------------------------------- | --------------------------------------- |
+| [ytmusicapi](https://github.com/sigma67/ytmusicapi) | YouTube Music API client                |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp)          | Audio extraction and download           |
+| [questionary](https://github.com/tmbo/questionary)  | Interactive CLI prompts                 |
+| [rich](https://github.com/Textualize/rich)          | Terminal formatting and panels          |
+| ffmpeg (system)                                     | Audio conversion and metadata embedding |
