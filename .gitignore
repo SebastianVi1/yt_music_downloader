@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+downloads/
+*.mp3
+*.m4a
+*.opus
+*.flac
+*.webm
+*.part
+*.ytdl
+oauth.json
+.DS_Store

@@ -1,0 +1,4 @@
+ytmusicapi>=1.0.0
+yt-dlp>=2024.0.0
+questionary>=2.0.0
+rich>=13.0.0
