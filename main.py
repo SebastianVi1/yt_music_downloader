@@ -659,10 +659,14 @@ def _check_ffmpeg() -> None:
     M4A without post-processing or embedded metadata).
     """
     if shutil.which("ffmpeg") is None:
+        if sys.platform == "win32":
+            hint = "winget install Gyan.FFmpeg"
+        else:
+            hint = "sudo apt install ffmpeg"
         console.print(Panel.fit(
             "[bold yellow]ffmpeg not found[/] -- downloading in "
             "[bold]M4A[/] format (no MP3 conversion, no metadata).\n"
-            "[dim]Install ffmpeg for MP3:  sudo apt install ffmpeg[/]",
+            f"[dim]Install ffmpeg:  {hint}[/]",
             border_style="yellow",
             title="Notice",
         ))

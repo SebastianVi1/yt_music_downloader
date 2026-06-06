@@ -18,23 +18,48 @@ A Python CLI tool to search, browse, and download music from YouTube Music.
 
 ## Setup
 
+### Linux / macOS
+
 ```bash
 cd yt_music_downloader
 ./run.sh
 ```
 
-Or manually:
+### Windows
+
+```powershell
+cd yt_music_downloader
+.\run.ps1
+```
+
+To make `ytmusic-dl` available from any terminal:
+
+```powershell
+.\run.ps1 -Install      # registers ytmusic-dl as a global command
+.\run.ps1 -Uninstall    # removes it
+```
+
+### Manual (any platform)
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
+# Unix:
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python main.py
+# Windows:
+.venv\Scripts\pip install -r requirements.txt
+.venv\Scripts\python main.py
 ```
 
 Install ffmpeg for MP3 output with embedded metadata:
 
 ```bash
+# Linux
 sudo apt install ffmpeg
+# Windows
+winget install Gyan.FFmpeg
+# macOS
+brew install ffmpeg
 ```
 
 ## Usage
